@@ -33,6 +33,8 @@ module.exports = function(source) {
   var quotes = params.quotes || '\'';
   var regex = new RegExp(funcName + '\\(([\'"`])(.*?)[\'"`](?:,\\s(.*?))?\\)', ['g']);
 
+  params.lng && i18next.changeLanguage(params.lng)
+  
   source = source.replace(regex, function (res, quotes, key, jsonString) {
 
     if (jsonString) {
