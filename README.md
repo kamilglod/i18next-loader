@@ -59,7 +59,7 @@ this is a webpack loader that can translate your code and generate bundle per ea
 ### query params:
 - `funcName`: change default function name (default is `__()`)
 - `quotes`: choose how to generates translated strings in code (default is `''`)
-- `lng`: choose the language of which bundle (default is undefined, if we pass nothing will use on the init)
+- `lng`: set i18next language (useful when having webpack config per language)
 
 ### problems:
 - it will not translate keys depending of variables values: it is a loader so the value of the variable is unknown in the process of loading file. (to handle it we need to use i18next directly)
